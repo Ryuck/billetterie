@@ -1,0 +1,7 @@
+#Module de réécriture des urls, la ligne du httpconf d'apache : LoadModule rewrite_module modules/mod_rewrite.so doit être décommentée
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^([-a-z0-9]+)\.html$ /billetterie/index.php?view=$1&%{QUERY_STRING} [L]

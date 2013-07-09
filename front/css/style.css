@@ -1,0 +1,816 @@
+/*******************************************/
+/*	               Common                  */
+/*******************************************/
+
+/* Besoin de commentaires pour du css ? 816 lignes je passe, firebug expliquera tout bien mieux que moi de toute façon */
+
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+reset css
+*/
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,select,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,button,caption,cite,code,dfn,em,input,optgroup,option,select,strong,textarea,th,var{font:inherit}del,ins{text-decoration:none}li{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:baseline}sub{vertical-align:baseline}legend{color:#000}
+
+#page{
+	width: 960px;
+	margin: 0 auto;
+	font-family: Calibri, Arial;
+	font-size: 18px;
+}
+
+.separator{
+	clear: both;
+	font-size: 0;
+	line-height: 0;
+}
+
+/***footer***/
+
+#footer{
+	height: 50px;
+}
+
+/*******************************************/
+/*	              Header                   */
+/*******************************************/
+
+#header{
+	background-color: #F1F1F1;
+	box-shadow: 1px 1px 10px #999999;
+}
+
+/******Ariane****/
+#header .ariane{
+    color: #1B6DB2;
+    font-family: arial;
+    font-size: 12px;
+    height: 30px;
+    line-height: 20px;
+    margin-left: 250px;
+    padding-left: 0;
+    padding-top: 10px;
+}
+
+#header .ariane a{
+	font-size: 12px;
+	text-decoration: none;
+	margin-left: 0;
+	padding-left: 0;
+	color: #1b6db2;
+}
+
+.puce{
+	background:url('image/puce.png');
+	width: 9px;
+	height: 10px;
+	font-size: 0;
+	line-height: 0;
+	margin: 5px;
+}
+
+#header .ariane div{
+	float: left;
+}
+
+/*******************************************/
+/*	             Accueil                   */
+/*******************************************/
+
+#accueil{
+	margin-left: 320px;
+    margin-top: 200px;
+}
+
+#accueil a{
+    color: #1B6DB2;
+    text-decoration: none;
+    line-height: 16px;
+}
+
+#accueil .puce{
+	float: left;
+	margin-right: 20px;
+}
+
+/*******************************************/
+/*	     reservation-form && recap         */
+/*******************************************/
+
+#bloc_reservation{
+	width: 960px;
+	height: 110px;
+	border: 2px solid black;
+	margin-bottom: 5px;
+	margin-top: 20px;
+}
+
+#bloc_partpro{
+	margin-bottom: 5px;
+	height: 80px;
+}
+
+#bloc_reservation .top, #bloc_partpro .top, #bloc_formulaire .top{
+	background-color: #3CA0D0;
+	height: 25px;
+	border-bottom: 1px solid black;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 5px;
+}
+
+#bloc_partpro .top, #bloc_formulaire .top{
+	text-align: left;
+	padding-left: 10px;
+}
+
+#bloc_reservation .bottom{
+	height: 80px;
+	margin: 15px 0 auto;
+	text-align: center;
+	position: relative;
+}
+
+#bloc_partpro .bottom{
+	margin-top: 10px;
+	margin-left: 10px;	
+}
+
+#bloc_reservation .reservation{
+	width: 450px;
+	height: 110px;
+	border-right: 1px solid black;
+	float: left;
+}
+
+#bloc_reservation .billet{
+	width: 160px;
+	height: 110px;
+	border-right: 1px solid black;
+	float: left;
+}
+
+#bloc_reservation .web{
+	width: 230px;
+	height: 110px;
+	border-right: 1px solid black;
+	float: left;
+}
+
+#bloc_reservation .web .bottom p{
+	font-weight: bold;
+}
+
+#bloc_reservation .total{
+	width: 117px;
+	height: 110px;
+	float: left;
+}
+
+#bloc_partpro{
+	width: 960px;
+	height: 70px;
+	border: 2px solid black;
+}
+
+#bloc_formulaire{
+	width: 960px;
+	border: 2px solid black;
+	
+}
+
+#bloc_formulaire .body .left{
+	line-height: 40px;
+	width: 330px;
+	margin-left: 30px;
+	margin-top: 20px;
+}
+
+#bloc_formulaire .body #form_reservation .left{
+	float: left;
+}
+
+#bloc_formulaire .body .right{
+	float: left;
+	width: 500px;
+	margin-left: 100px;
+	line-height: 40px;
+	margin-top: 60px;
+}
+
+#bloc_formulaire .body .left label{
+	margin-right: 20px;
+	float: left;
+}
+
+#bloc_formulaire .body .right label{
+	float: left;
+}
+
+#bloc_formulaire .body .left select{
+	float: right;
+	width: 200px;
+	border: 1px solid gray;
+	height: 23px;
+	font-size: 16px;
+	margin-top: 10px;
+}
+
+#bloc_formulaire .body .left input{
+	float: right;
+	width: 200px;
+	border: 1px solid gray;
+	height: 23px;
+	font-size: 16px;
+	margin-top: 10px;
+	line-height: 16px;
+}
+
+#bloc_formulaire .body .right input{
+	float: right;
+	width: 200px;
+	margin-right: 90px;
+	border: 1px solid gray;
+	margin-top: 10px;
+	height: 23px;
+	font-size: 16px;
+	line-height: 16px;
+}
+
+#bloc_formulaire .body .right span{
+	color: red;
+	font-size: 10px;
+	line-height: 2px;
+	margin-left: 230px;
+	visibility: hidden;
+}
+
+#bloc_formulaire .body .infomail{
+	margin-left: 158px;
+	font-size: 12px;
+}
+
+#bloc_formulaire .body .bonplan{
+	margin-left: 158px;
+	font-size: 16px;
+	margin-top: 20px;
+}
+
+#bloc_formulaire .body .renseignements{
+	margin-left: 30px;
+	margin-bottom: 10px;
+	font-size: 12px;
+}
+
+#form_reservation button{
+	height: 25px !important;
+	font-size: 14px !important;
+	font-weight: bold !important;
+	margin-left: 720px !important;
+	width: 150px !important;
+}
+
+#form_reservation button span{
+	padding:0 !important;
+}
+
+#bottom-recap{
+	margin-top: 20px;
+	margin-left: 50px;
+}
+	
+#bottom-recap .modif{
+	margin-left: 80px;
+}
+
+#bottom-recap button{
+	height: 25px !important;
+	font-size: 14px !important;
+	font-weight: bold !important;
+	width: 180px !important;
+}
+
+#bottom-recap button span{
+	padding:0 !important;
+}
+
+#bloc_reservation .billet .bottom input{
+	text-align: center;
+	position: absolute;
+	left: 40px;
+	top: 12px;
+}
+
+#bloc_reservation .billet .bottom button{
+	height: 18px !important;
+	font-size: 10px !important;
+	font-weight: bold !important;
+	width: 18px !important;
+}
+
+#bloc_reservation .billet .bottom .plus{
+	position: absolute;
+	right: 20px;
+}
+
+#bloc_reservation .billet .bottom .moins{
+	position: absolute;
+	right: 20px;
+	bottom: 30px;
+}
+
+#bloc_reservation .billet .bottom button span{
+	padding:0 !important;
+}
+
+#bloc_reservation .total .bottom .unbillet{
+	font-weight: bold;
+	margin-top: 25px;
+}
+
+#bloc_reservation .total .bottom .plusieursbillets span{
+	text-decoration: line-through;
+	font-size: 14px;
+	font-weight: lighter;
+}
+
+#bloc_reservation .total .bottom .plusieursbillets{
+	font-weight: bold;
+}
+
+#bloc_reservation .billet .bottom .recap{
+	position: absolute;
+	top: 10px;
+}
+
+
+/*******************************************/
+/*	          gestion-commande             */
+/*******************************************/
+
+#gestion-commande{
+	width: 960px;
+	margin: 0 auto;
+}
+
+#gestion-commande p{
+	font-weight: bold;
+	float: right;
+	margin: 20px;
+}
+
+#gestion-commande table{
+	border-collapse: collapse;
+}
+
+#gestion-commande table a{
+	color : #1B6DB2;
+}
+
+#gestion-commande table a:link{
+	color : #1B6DB2;
+}
+
+#gestion-commande table a:visited{
+	color : #1B6DB2;
+}
+
+#gestion-commande table .espace{
+	height: 10px;
+	border: none;
+	border-bottom: 1px solid #1B6DB3;
+	background: none !important;
+}
+
+#gestion-commande table .espace:hover{
+	background: none !important;
+}
+
+#gestion-commande table .espace td{
+	height: 10px !important;
+	border: none;
+}
+
+#gestion-commande table thead th{
+	height: 40px;
+	background-image: url("image/fd-thead.png");
+    background-repeat: repeat-x;
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 12px;
+    text-shadow: 1px 2px 0 #0E4471;
+    font-variant: small-caps;
+}
+
+#gestion-commande table tr{
+	width: 960px;
+}
+
+#gestion-commande table thead tr th{
+	text-align: center;
+}
+
+#gestion-commande table .repeat-1{
+	background:url('image/fd-tr1.png') repeat-x scroll;
+	border-bottom: 1px solid #C0C0C0;
+	border-left: 1px solid #1B6DB3;
+    border-right: 1px solid #1B6DB3;
+}
+
+#gestion-commande table .repeat-2{
+	background:url('image/fd-tr2.png') repeat-x scroll;
+	border-bottom: 1px solid #C0C0C0;
+	border-left: 1px solid #1B6DB3;
+    border-right: 1px solid #1B6DB3;
+}
+
+#gestion-commande table tr:hover{
+	background:url('image/fd-trhover.png') repeat-x scroll;
+}
+
+#gestion-commande table td{
+	height: 40px;
+	font-size: 14px;
+	color: #1B6DB2;
+	text-align: center;
+}
+
+#gestion-commande table .last{
+	border-bottom: 1px solid #1B6DB3;
+}
+
+#gestion-commande table .first{
+	border-top: 1px solid #1B6DB3;
+}
+
+#gestion-commande table .datcom{
+	width: 95px;
+}
+
+#gestion-commande table .numcom{
+	width: 110px;
+}
+
+#gestion-commande table .clicom{
+	width: 180px;
+}
+
+#gestion-commande table .numclicom{
+	width: 140px;
+}
+
+#gestion-commande table .pricom{
+	width: 80px;
+}
+
+#gestion-commande table .etacom{
+	width: 110px;
+}
+
+#gestion-commande table .liencom{
+	width: 245px;
+}
+
+#gestion-commande .quit{
+    font-size: 14px !important;
+    font-weight: bold !important;
+    height: 25px !important;
+    margin-left: 3px !important;
+    margin-top: 20px !important;
+    width: 150px !important;
+}
+
+#gestion-commande .quit span{
+    padding: 0 !important;
+}
+
+/*******************************************/
+/*	          gestion-entrees              */
+/*******************************************/
+
+#gestion-entrees{
+	width: 860px;
+	height: 200px;
+	margin: 50px;
+	border: 1px solid black;
+	padding-top: 100px;
+}
+
+#gestion-entrees label{
+	margin-left: 250px;
+	float: left;
+	font-weight: bold;
+}
+
+#gestion-entrees input{
+	margin-right: 250px;
+	float: right;
+	width: 200px;
+	border: 1px solid gray;
+}
+
+#gestion-entrees .authentification{
+	height: 30px !important;
+	font-size: 10px !important;
+	font-weight: bold !important;
+	width: 85px !important;
+	margin-left: 400px;
+	margin-top: 30px;
+}
+
+#tabs{
+	width: 860px;
+	margin: 50px;
+	border: 0 none !important;
+}
+
+#tabs ul{
+	background: none !important;
+	border: none !important;
+	padding: 0 !important;
+}
+
+#tabs ul li{
+	margin-right: 0 !important;
+}
+
+#tabs-1, #tabs-2{
+	border: 1px solid black;
+	font-size: 14px;
+	padding: 30px 80px;
+	height: 350px;
+}
+
+#tabs-1 p, #tabs-2 p{
+	font-weight: bold;
+}
+
+#tabs-1 input, #tabs-2 input{
+	border: 1px solid gray;
+	width: 250px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+#tabs-2 input{
+	text-transform: uppercase;
+}
+
+#tabs-1 .recherche, #tabs-2 .recherche{
+	height: 22px !important;
+	font-size: 16px !important;
+	font-weight: bold !important;
+	width: 160px !important;
+	margin-left: 20px !important;
+}
+
+#tabs-1 .recherche span, #tabs-2 .recherche span{
+	padding: 0 !important;
+}
+
+.result-content .info-billet{
+	background-color: #F14646;
+    border: 1px solid gray;
+    font-size: 16px;
+    height: 35px;
+    margin: 40px 20px 20px 0;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.result-content .left{
+	float: left;
+    font-weight: normal;
+    width: 280px;
+    line-height: 30px;
+}
+
+.result-content .left span{
+	font-weight: bold;
+	font-size: 17px;
+}
+
+.result-content .right{
+	border-left: 1px solid black;
+    float: left;
+    padding-left: 50px;
+    width: 340px;
+    line-height: 40px;
+    overflow: auto;
+    max-height: 200px;
+}
+
+.result-content .right span{
+	text-transform: uppercase;
+}
+
+.result-content .recherche-client{
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+.result-content .erreur{
+	background-color: #F14646;
+    border: 1px solid gray;
+    height: 20px;
+	width: 250px;
+    text-align: center;
+}
+
+.result-content table{
+	border-collapse: collapse;
+}
+
+.result-content table th{
+	border: 1px solid black;
+	height: 30px;
+	width: 170px;
+	text-align: center;
+}
+
+.result-content table td{
+	border: 1px solid black;
+	height: 30px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.result-content table td:first-child{
+	text-transform: uppercase;
+}
+
+.result-content table .separate td{
+	border: none;
+	height: 5px;
+}
+
+/*******************************************/
+/*	         Details commande              */
+/*******************************************/
+
+#dialog-message .tb1, #dialog-message .tb2, #dialog-message .tb3{
+	border: 1px dotted gray;
+	font-size: 12px;
+}
+
+#dialog-message .tb1, #dialog-message .tb2{
+	margin-bottom: 20px;
+	width: 630px;
+}
+
+#dialog-message .tb1{
+	padding-bottom: 15px;
+}
+
+#dialog-message .tb1 .client, #dialog-message .tb1 .ref{
+	float: left;
+	width: 315px;
+}
+
+#dialog-message .tb1 .client .top, #dialog-message .tb1 .ref .top{
+    background-color: #769EB2;
+    border-bottom: 1px solid blue;
+    color: white;
+    font-variant: small-caps;
+    height: 20px;
+    line-height: 18px;
+    margin: 2px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+
+#dialog-message .tb1 .content{
+	padding-left: 12px;
+}
+
+#dialog-message .tb1 .content span{
+	font-family: courier;
+	color: gray;
+	margin-right: 8px;
+}
+
+#dialog-message .tb1 .client .content{
+	line-height: 28px;
+}
+
+#dialog-message .tb1 .ref .content{
+	line-height: 18px;
+}
+
+#dialog-message .tb2 table thead tr{
+	height: 22px;
+}
+
+#dialog-message .tb2 table thead th{
+	background-color: #769EB2;
+	border: 2px solid white;
+    border-bottom: 1px solid blue;
+    color: white;
+    font-variant: small-caps;
+    line-height: 18px;
+    padding-left: 5px;
+}
+
+#dialog-message .tb2 table thead .designation{
+	width: 150px;
+}
+
+#dialog-message .tb2 table thead .prix{
+	width: 160px;
+}
+
+#dialog-message .tb2 table thead .quantite, #dialog-message .tb2 table thead .remise, #dialog-message .tb2 table thead .montant{
+	width: 100px;
+}
+
+#dialog-message .tb2 table tbody tr{
+	height: 40px;
+	line-height: 30px;
+	font-family: courier;
+	color: gray;
+}
+
+#dialog-message .tb2 table tbody tr td{
+	text-align: center;	
+}
+
+#dialog-message .tb3{
+	width: 365px;
+}
+
+#dialog-message .tb3 table thead tr{
+	height: 22px;
+}
+
+#dialog-message .tb3 table thead th{
+	background-color: #769EB2;
+	border: 2px solid white;
+    border-bottom: 1px solid blue;
+    color: white;
+    font-variant: small-caps;
+    line-height: 18px;
+    padding-left: 5px;
+}
+
+#dialog-message .tb3 table thead .totalht, #dialog-message .tb3 table thead .totalttc{
+	width: 90px;
+}
+
+#dialog-message .tb3 table thead .totaltva{
+	width: 185px;
+}
+
+#dialog-message .tb3 table tbody tr{
+	height: 50px;
+	line-height: 35px;
+	font-family: courier;
+	color: gray;
+}
+
+#dialog-message .tb3 table tbody tr td{
+	text-align: right;
+	padding-right: 5px;
+}
+
+/*******************************************/
+/*	               Pagination              */
+/*******************************************/
+
+#pagination{
+	margin: 0 auto;
+}
+
+.pagination{
+	list-style-type: none;
+}
+
+.pagination {
+	margin-top:15px;
+}
+.pagination li {
+	float:left;
+	margin-left:3px;
+	margin-right:3px;
+}
+.pagination span{
+	padding:0 !important;
+}
+.pagination .current {
+	color:#E17009;
+	font-weight:bold;
+}
+
+.pagination li a{
+	font-size: 12px;
+	height: 18px;
+	width: 25px;
+}
+
+.pagination li .current{
+	line-height: 23px;
+	margin-left: 8px;
+	margin-right: 8px;
+}
